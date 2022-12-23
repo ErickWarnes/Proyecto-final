@@ -1,0 +1,70 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Fundación Ala'</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="static/assets/img/logo.png" rel="icon">
+    <link href="static/assets/img/logo.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+      rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="static/assets/css/style.css" rel="stylesheet">
+  
+    
+  </head>
+
+  <body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+      <div class="container d-flex justify-content-between align-items-center">
+  
+        <div class="logo">
+          <!--h1 class="text-light"><a href="index.html"><span>Fundación Ala'</span></a></h1!-->
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <a href="base"><img src="static/assets/img/logo2.png" alt="" class="img-fluid"></a>
+        </div>
+  
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="quienes_somos">Quienes Somos</a></li>
+            <li><a href="voluntariado">Voluntariado</a></li>
+            <li><a href="programas">Programas</a></li>
+            <li><a href="noticias">Noticias</a></li>
+            <li><a href="contacto">Contacto</a></li>
+            {% if user.is_authenticated %}
+            <li><a href='{% url 'logout'%}'> Cerrar sesión</a></li>
+              <li><a href='#'>@{{ user.username }}
+            {% else %}
+            <li>
+              <a href='{% url 'login'%}'>Iniciar Sesion</a>
+            </li>
+            <li>
+              <a href='{% url 'register'%}'>Registrate</a>
+            </li>
+            {% endif %}
+            </ul>
+        </nav><!-- .navbar -->
+  
+      </div>
+    </header><!-- End Header -->
+  

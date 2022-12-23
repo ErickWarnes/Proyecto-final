@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='x-ua-Compatible' content='ie=edge'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Registro de Usuario</title>
+
+</head>
+<link rel="stylesheet" href="./style.css">
+<body>
+
+    <div class='container'>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class='row'>
+            <div class='col-12 col-md-6 offset-md3'>
+
+                <div class='card'>
+                    <div class='card-body'>
+                        <h2>Registro de Usuario</h2>
+                        <hr>
+                        <form action=''method='post'>
+
+                            {% csrf_token %}
+                            {{form}}
+                            <li><a href='/'>Volver al Inicio</a></li>
+                            <a href='{%url 'login' %}'>Iniciar Sesion</a>
+
+                            <input type='submit' value='Registrarse' class='btn btn-success float-right'>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>    
+    </div>
+    <link rel="stylesheet" href="./style.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+</body>
+</html>
+

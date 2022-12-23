@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+
+  <title>FBaseundación Ala'</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Fundación Ala'</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="static/assets/img/logo.png" rel="icon">
+    <link href="static/assets/img/logo.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+      rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="static/assets/css/style.css" rel="stylesheet">
+  
+    
+  </head>
+
+  <body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+      <div class="container d-flex justify-content-between align-items-center">
+  
+        <div class="logo">
+          <!--h1 class="text-light"><a href="index.html"><span>Fundación Ala'</span></a></h1!-->
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <a href="base"><img src="static/assets/img/logo2.png" alt="" class="img-fluid"></a>
+        </div>
+  
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="quienes_somos">Quienes Somos</a></li>
+            <li><a href="voluntariado">Voluntariado</a></li>
+            <li><a href="programas">Programas</a></li>
+            <li><a href="noticias">Noticias</a></li>
+            <li><a href="contacto">Contacto</a></li>
+            {% if user.is_authenticated %}
+            <li><a href='{% url 'logout'%}'> Cerrar sesión</a></li>
+              <li><a href='#'>@{{ user.username }}
+            {% else %}
+            <li>
+              <a href='{% url 'login'%}'>Iniciar Sesion</a>
+            </li>
+            <li>
+              <a href='{% url 'register'%}'>Registrate</a>
+            </li>
+            {% endif %}
+            </ul>
+        </nav><!-- .navbar -->
+  
+      </div>
+    </header><!-- End Header -->
+
+<body>
+
+  
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex justify-cntent-center align-items-center">
+      <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+  
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Nuestra <span>Historia</span></h2>
+            <p class="animate__animated animate__fadeInUp">Nacimos en Octubre de 2022 en la localidad de Resistencia provincia de Chaco, por la iniciativa de un grupo de voluntarios amigos que, asesorados y guiados por la necesidad de la comunidad
+              , comenzamos a distribuir alimentos y ropa entre la población más pobre y vulnerable de la zona.
+              Desde entonces, estamos en constante crecimiento
+            </p>
+            <a href="quienes_somos" class="btn-get-started animate__animated animate__fadeInUp">Ver Más</a>
+          </div>
+        </div>
+  
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">¿Que hacemos?</h2>
+            <p class="animate__animated animate__fadeInUp">En Argentina llevamos adelante muchos programas por medio de
+              donaciones económicas y materiales, y por la colaboración de numerosos voluntarios que de un modo gratuito,
+              organizado y comprometido, se empeñan en mejorar y transformar las condiciones de vida de los más
+              vulnerables, manifestando el amor “mas con gestos que con palabras”</p>
+            <a href="quienes_somos" class="btn-get-started animate__animated animate__fadeInUp">Ver Más</a>
+          </div>
+        </div>
+  
+  
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        </a>
+  
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        </a>
+  
+      </div>
+    </section><!-- End Hero -->
+  
+    <main id="main">
+  
+      
+  
+      <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+ 
+              <div class="entry-content">
+                <p>
+
+    <!-- ======= Services Section ======= -->
+<section id="services" class="services section-bg">
+  <div class="container" data-aos='fade-up'>
+
+    <div class='section-tittle'>
+      <h2> Noticias </h2>
+      <p> Mira nuestras actividades </p>
+    </div>
+    <div class="row ">
+      {%for n in object_list%}
+          <div class='container' data-aos='zoom-in'>
+            <div clas='row'>
+              <div class='col-lg-text-center text-lg'>
+                <div class="icon-box">
+
+
+                   <h4><a href="">{{n.titulo}}</a></h4>
+                   {%if n.imagen %} <img src="{{n.imagen.url}}" class = "img-fluid animated" alt = "">
+                   {% else %} <img src="static/assets/img/default.png">
+                   {% endif %}                        
+                   <h6><a href="">{{n.subtitulo}}</a></h6>
+                   <h4><a href="">{{n.publicado}}</a></h4>
+                   <p>{{n.texto}}</p>
+                     <a class='cta-btn align-middle' href='post'><br> Hace tus comentarios acá </a>
+                     <div class="read-more">
+                      <a href="blog-single.html">Ver Más.</a>
+                     </div>
+                </div>
+                <section id='' class=''>
+                  <div class='container' data-aos="fade-up"></div>
+                </section>
+              </div>
+              </div>
+            </div>
+      {% endfor %}  
+
+    </div>
+  </div>
+</section><!-- End Services Section -->
+
+</article><!-- End blog entry -->
+
+
+
+
+
+      
+    </main><!-- End #main -->
+    <!-- ======= Service Details Section ======= -->
+    <section class="service-details">
+      <div class="container">
+  
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="static/assets/img/Comunidad-Qom-4-De-Corazon.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">Nuestra Misión</a></h5>
+                <p class="card-text">Somos un movimiento de voluntarios que acompaña a personas en situación de soledad y vulnerabilidad, creando y desarrollando espacios de confianza, alegría y esperanza.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="static/assets/img/Qom-1-1024x768.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">Nuestro Plan</a></h5>
+                <p class="card-text">Abocados a ayudar a las comunidades mas vulnerables</p>
+              </div>
+            </div>
+  
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="static/assets/img/coro-qom-chelaalapijpg.webp" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">Nuestra Visión</a></h5>
+                <p class="card-text">Gestar creativamente una sociedad comprometida en la justicia y solidaridad que amando y sirviendo pone la mirada en la persona y sus necesidades.t</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="static/assets/img/qom-pueblos-originarios-chaco.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">Nuestros Valores</a></h5>
+                <p class="card-text">Amor, paciencia.........</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </section><!-- End Service Details Section -->
+
+  {% include 'footer.html' %}
+
+  
+
+</body>
+
+</html>
